@@ -28,7 +28,6 @@ async function bundle(main, options) {
   }
 
   const bundler = new ParcelDefaultBundler(main, options)
-  bundler.addAssetType("json", require.resolve("./../config/jsonType"))
 
   options.target = options.target || 'browser'
 

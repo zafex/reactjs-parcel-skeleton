@@ -34,7 +34,6 @@ async function bundle(main, options) {
   }
 
   const bundler = new ParcelDefaultBundler(main, options)
-  bundler.addAssetType("json", require.resolve("./../config/jsonType"))
   bundler.on('bundled', (bundle) => {
     fs.rename(Path.join(outputRoot, './static/index.html'), outputIndex, (err) => {
        if (err) {
